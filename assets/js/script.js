@@ -34,14 +34,14 @@ function memoryClear() {
 }
 
 function memoryRecall() {
-    var x = localStorage.getItem(memory, display.value);
+    var x = localStorage.getItem(memory);
     document.getElementById('result').innerHTML = x;
-    console.log(localStorage.getItem(memory, display.value));
-    display.value = x;
+    console.log(localStorage.getItem(memory));
+    display.value = display.value + x;
 }
 
 function memoryPlus() {
-    var result = Number(localStorage.getItem(memory, display.value)) + Number(display.value);
+    var result = Number(localStorage.getItem(memory)) + Number(display.value);
     console.log(result);
     localStorage.setItem(memory, result);
     document.getElementById('result').innerHTML = result;
