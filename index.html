@@ -16,6 +16,10 @@
     />
 
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/f82f252a4e.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
@@ -72,7 +76,6 @@
             <option value="function" id="fun" selected disabled>
               &#x192; Function
             </option>
-            <option value="abs">abs(x)</option>
             <option value="floor">floor(x)</option>
             <option value="ceil">ceil(x)</option>
           </select>
@@ -87,7 +90,9 @@
         <button type="button" class="btn" onclick="pi()">&pi;</button>
         <button type="button" class="btn" onclick="e()">e</button>
         <button type="button" class="btn" onclick="clearDisplay()">C</button>
-        <button type="button" class="btn" onclick="oneClear()">&#x21B5;</button>
+        <button type="button" class="btn" onclick="oneClear()">
+          <i class="fa-solid fa-delete-left"></i>
+        </button>
       </div>
 
       <!-- 5th row -->

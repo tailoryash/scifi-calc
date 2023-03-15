@@ -18,7 +18,7 @@ function calculate() {
 }
 
 function degree() {
-    display.value = (display.value * (180 / Math.PI)).toFixed(2);
+    display.value = (display.value * (180 / Math.PI)).toFixed(8);
 }
 
 function fixedExpo() {
@@ -69,41 +69,45 @@ function trignometry() {
     } else if (x == 'tan') {
         tan();
     }
+
+   
 }
 
 function sin() {
-    display.value = Math.sin(display.value * Math.PI / 180).toFixed(2);
+    display.value = Math.sin(display.value * Math.PI / 180).toFixed(8);
+    document.getElementById("trigno").value ="trignometry" ;
 }
 
 function cos() {
-    display.value = Math.cos(display.value * Math.PI / 180).toFixed(2);
+    display.value = Math.cos(display.value * Math.PI / 180).toFixed(8);
+     document.getElementById("trigno").value ="trignometry" ;
 }
 
 function tan() {
-    display.value = Math.tan(display.value * Math.PI / 180).toFixed(2);
+    display.value = Math.tan(display.value * Math.PI / 180).toFixed(8);
+    document.getElementById("trigno").value = "trignometry";
 }
 
 function func() {
     let x = document.getElementById('func').value;
-    if (x == 'abs') {
-        abs();
-    } else if (x == 'floor') {
+    if (x == 'floor') {
         floor();
     } else if (x == 'ceil') {
         ceil();
     }
 }
 
-function abs() {
-    display.value = Math.abs(display.value);
-}
 
 function floor() {
     display.value = Math.floor(display.value);
+    document.getElementById("func").value = "function";
+
 }
 
 function ceil() {
     display.value = Math.ceil(display.value);
+    document.getElementById("func").value = "function";
+
 }
 
 function pi() {
@@ -112,7 +116,7 @@ function pi() {
     } else if (display.value == 0) {
         display.value = '0';
     } else {
-        display.value = (display.value * 3.14).toFixed(3);
+        display.value = (display.value * 3.14).toFixed(8);
     }
 }
 
@@ -121,7 +125,7 @@ function e() {
     if (display.value == "") {
         display.value = Math.E;
     } else {
-        display.value = (display.value * Math.E).toFixed(3);
+        display.value = (display.value * Math.E).toFixed(8);
     }
 }
 
@@ -146,7 +150,7 @@ function absulatevalue() {
 }
 
 function exponential() {
-    display.value = Math.exp(display.value).toFixed(5);
+    display.value = Math.exp(display.value).toFixed(8);
 }
 
 function sqroot() {
@@ -158,11 +162,11 @@ function powX() {
 }
 
 function log() {
-    display.value = Math.log10(display.value).toFixed(2);
+    display.value = Math.log10(display.value).toFixed(8);
 }
 
 function ln() {
-    display.value = Math.log(display.value).toFixed(2);
+    display.value = Math.log(display.value).toFixed(8);
 }
 
 function factorial() {
